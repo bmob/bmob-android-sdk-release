@@ -1,0 +1,16 @@
+BmobSDK_v3.4.7_0527更新说明：
+
+1、文件服务的依赖库升级到okhttp3;
+2、修复调用文件的download方法有时成功有时却提示`file download error(9015)`的错误;
+3、修复连接网络不稳定的wifi进行文件上传操作时出现`RuntimeException: json 解析出错`的问题;
+4、数据加解密改用底层so库实现，进一步保证数据安全;
+5、将权限管理类PermissionManager分离出SDK以减少依赖关系;
+6、修复部分机型出现的z.so无法加载的问题。
+
+注：
+1、由于PermissionManager权限管理类需要依赖23.2.1的support-v4的jar包导致SDK依赖包较大，故分离出SDK，开发者可以在SDKDemo的com.example.bmobexample.permission包下面查看该源码;
+
+2、新增BmobPush_V0.9:
+
+1)、新增PushNotifyService和PushNotifyReceiver类，优化推送稳定性。
+2)、修复部分Android5.0以上的机型安装多个推送sdk的应用时出现接收多条推送消息的问题

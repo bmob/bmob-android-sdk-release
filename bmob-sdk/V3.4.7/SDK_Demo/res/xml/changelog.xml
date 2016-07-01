@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="V3.4.7_0527">
+        <change>1、文件服务的依赖库升级到okhttp3；</change>
+        <change>2、修复调用文件的download方法有时成功有时却提示`file download error(9015)`的错误；</change>
+        <change>3、修复连接网络不稳定的wifi进行文件上传操作时出现`RuntimeException: json 解析出错`的问题；</change>
+        <change>4、数据加解密改用底层so库实现，进一步保证数据安全；</change>
+        <change>5、将PermissionManager权限管理类分离出SDK，以减少依赖关系；</change>
+        <change>6、修复部分机型出现的z.so无法加载的问题。</change>
+    </release>
+</changelog>
